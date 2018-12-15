@@ -7,17 +7,17 @@ class App extends Component {
   state = {
     count: 0
   }
-  
+
   render() {
     return (
       <div>
         <h1>hello world</h1>
         <h2>Count: {this.state.count}</h2>
-        {
-          this.state.count === 10
-          ? <React.Suspense fallback={null}><Warning /></React.Suspense>
-          : null
-        }
+        {this.state.count === 10 ? (
+          <React.Suspense fallback={null}>
+            <Warning />
+          </React.Suspense>
+        ) : null}
       </div>
     )
   }
