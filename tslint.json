@@ -9,7 +9,9 @@
   "jsRules": {},
   "rules": {
     "ordered-imports": false,
-    "no-implicit-dependencies": [true, "dev"]
+    "no-implicit-dependencies": [true, "dev"],
+    "interface-name": false,
+    "typedef": [true, "call-signature", "parameter", "arrow-parameter"]
   },
   "rulesDirectory": [],
   "linterOptions": {

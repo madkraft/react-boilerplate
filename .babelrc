@@ -8,7 +8,13 @@
         "useBuiltIns": "entry"
       }
     ],
-    "@babel/typescript",
+    [
+      "@babel/typescript",
+      {
+        "isTSX": true,
+        "allExtensions": true
+      }
+    ],
     "@babel/preset-react"
   ],
   "plugins": [

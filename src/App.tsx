@@ -1,20 +1,20 @@
-import * as React from 'react'
+import React, { Component } from 'react'
 import { hot } from 'react-hot-loader'
 
 const Warning = React.lazy(() => import('./Warning'))
 
-interface IState {
+interface State {
   count: number
   label: string
 }
 
-class App extends React.Component {
-  public state: IState = {
+class App extends Component {
+  public state: State = {
     count: 0,
-    label: '123'
+    label: 'true'
   }
 
-  public render() {
+  public render(): JSX.Element {
     return (
       <div>
         <h1>hello world</h1>
