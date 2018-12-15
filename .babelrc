@@ -1,24 +1,33 @@
 {
-  "presets": [[
-    "@babel/preset-env",
-    {
-      "targets": [
-        "last 2 versions",
-        "not dead",
-        "not < 2%",
-        "not ie 11"
-      ],
-      "useBuiltIns": "entry"
-    }
-  ], "@babel/preset-react"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false,
+        "targets": ["last 2 versions", "not dead", "not < 2%", "not ie 11"],
+        "useBuiltIns": "entry"
+      }
+    ],
+    "@babel/typescript",
+    "@babel/preset-react"
+  ],
   "plugins": [
     "react-hot-loader/babel",
     "@babel/plugin-proposal-class-properties",
+    "@babel/proposal-object-rest-spread",
     "@babel/plugin-syntax-dynamic-import"
   ],
   "env": {
     "test": {
-      "plugins": ["dynamic-import-node"]
+      "plugins": ["dynamic-import-node"],
+      "presets": [
+        [
+          "@babel/preset-env",
+          {
+            "modules": "commonjs"
+          }
+        ]
+      ]
     }
   }
 }
